@@ -32,7 +32,7 @@ def populate():
          "url": "https://docs.djangoproject.com/en/1.9/inro/tutprial01/",
          "views": 214},
         {"title": "Django Rocks",
-         "url": "http://djangorocks.com",
+         "url": "http://www.djangorocks.com/",
          "views": 56},
         {"title": "How to Tango with Django",
          "url": "http://www.tangowithdjango.com/",
