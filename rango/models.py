@@ -1,5 +1,17 @@
 from django.db import models
 from django.template.defaultfilters import slugify
+from django.contrib.auth.models import User
+
+
+class UserProfile(models.Model):
+    # This line is required. Link UserProfile to a User model instance.
+    user = models.OneToOneField(User)
+
+    website = models.URLField(blank=True)
+    picture = models.ImageField(upload_to='profile_image', blank=True)
+
+    def __ste__(self):
+        return self.user.username
 
 
 class Category(models.Model):
