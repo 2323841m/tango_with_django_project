@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Rango</title>
-</head>
-<body>
+{% extends 'rango/base.html' %}
+
+{% block body_block %}
     <h1>Add Page</h1>
     <div>
         {% if category %}
@@ -26,10 +23,7 @@
     </div>
     <div>
         {% if category %}
-            <br /><a href="/rango/category/{{ category.slug }}/">{{ category }}</a>
-        {% else %}
-            <br /><a href="/rango/">Index</a>
+            <br /><a href="{% url 'show_category' category.slug %}">{{ category }}</a>
         {% endif %}
     </div>
-</body>
-</html>
+{% endblock %}
